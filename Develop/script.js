@@ -12,10 +12,10 @@ function generateRandomPassword(length) {
   }
   console.log(passwordLength);
 
-  var includeLowerCase = confirm("Do you want to include lowercase charaters in your password?");
-  var includeUpperCase = confirm("Do you want to include uppercase charaters in your password");
-  var includeNumeric = confirm("Do you want to include numeric charaters in your password");
-  var includeSpecial = confirm("Do you want to include special charaters in your password");
+  var includeLowerCase = confirm("Do you want lowercase characters in your password?");
+  var includeUpperCase = confirm("Do you want uppercase characters in your password?");
+  var includeNumeric = confirm("Do you want numbers in your password?");
+  var includeSpecial = confirm("Do you want special characters in your password?");
   console.log(includeLowerCase);
   console.log(includeUpperCase);
   console.log(includeNumeric);
@@ -23,10 +23,10 @@ function generateRandomPassword(length) {
 
   while(!includeLowerCase && !includeUpperCase && !includeNumeric && !includeSpecial){
     alert("Please choose at least one:");
-    includeLowerCase = confirm("Do you want lowercase charaters in your password?");
-    includeUpperCase = confirm("Do you want uppercase charaters in your password");
-    includeNumeric = confirm("Do you want numbers in your password");
-    includeSpecial = confirm("Do you want special characters in your password");
+    includeLowerCase = confirm("Do you want lowercase characters in your password?");
+    includeUpperCase = confirm("Do you want uppercase characters in your password?");
+    includeNumeric = confirm("Do you want numbers in your password?");
+    includeSpecial = confirm("Do you want special characters in your password?");
     console.log(includeLowerCase);
     console.log(includeUpperCase);
     console.log(includeNumeric);
@@ -37,7 +37,6 @@ function generateRandomPassword(length) {
     const randomIndex = Math.floor(Math.random() * charset.length);
     password += charset.charAt(randomIndex);
   }
-
       
   if(includeUpperCase === true) {
     var random = randomNumber(0, (upperCaseChars.length - 1));
@@ -52,10 +51,8 @@ function generateRandomPassword(length) {
     var random = randomNumber(0, (numericChars.length - 1));
     var char = numericChars[random];
     password = password += char;
-    if(password.length === passwordLength) {
-      break;
-    }
-  }
+    if(password.length === passwordLength) 
+  
   
   if(includeSpecial === true) {
     var random = randomNumber(0, (specialChars.length - 1))
